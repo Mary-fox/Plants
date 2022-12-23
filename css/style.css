@@ -1,0 +1,116 @@
+
+/* Inter - 400 */
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    src: url("../assets/fonts/Inter-Regular.ttf");
+}
+
+/* Inter - 700 */
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 700;
+    src: url("../assets/fonts/Inter-Bold.ttf");
+}
+
+/* Inika - 400 */
+
+@font-face {
+    font-family: "Inika";
+    font-weight: 400;
+    src: url("../assets/fonts/Inika-Regular.ttf");
+}
+
+/* Inika - 700 */
+
+@font-face {
+    font-family: "Inika";
+    font-weight: 700;
+    src: url("../assets/fonts/Inika-Bold.ttf");
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.active {
+    font-weight: 700;
+    color: #E06733;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #636060;
+}
+
+.wrapper {
+    width: 1222px;
+    margin: 0 auto;
+}
+.header {
+    background: #EDF2EC;
+}
+.header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 52px 0 61px 0;
+}
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 47px;
+}
+.nav__item {
+    font-family: 'Inika';
+    cursor: pointer;
+}
+.welcome {
+    background: #EDF2EC;
+}
+.welcome__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 52px 0 62px 0;
+}
+.welcome__title {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 50px;
+    color: #717171;
+    padding-bottom: 42px;
+}
+.welcome__content{
+    max-width: 549px;
+    padding-top: 42px;
+}
+.green {
+    color: #499A18;
+}
+.welcome__text {
+    font-size: 20px;
+    line-height: 35px;
+    color: #636060;
+    padding-bottom: 47px;
+}
+.btn {
+    padding: 11px 27px;
+    border: 2px solid #E06733;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+}
