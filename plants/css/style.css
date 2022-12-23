@@ -42,6 +42,12 @@
     font-weight: 700;
     color: #E06733;
 }
+.green {
+    color: #499A18;
+}
+.red {
+    color: #E06733;
+}
 
 html,
 body {
@@ -55,7 +61,7 @@ body {
 }
 
 .wrapper {
-    width: 1222px;
+    max-width: 1222px;
     margin: 0 auto;
 }
 .header {
@@ -82,7 +88,7 @@ body {
 .welcome__container {
     display: flex;
     justify-content: space-between;
-    padding: 52px 0 62px 0;
+    padding: 52px 0 48px 0;
 }
 .welcome__title {
     font-family: 'Inter';
@@ -90,14 +96,11 @@ body {
     font-size: 45px;
     line-height: 50px;
     color: #717171;
-    padding-bottom: 42px;
+    padding-bottom: 13px;
 }
 .welcome__content{
     max-width: 549px;
-    padding-top: 42px;
-}
-.green {
-    color: #499A18;
+    padding-top: 11px;
 }
 .welcome__text {
     font-size: 20px;
@@ -106,11 +109,40 @@ body {
     padding-bottom: 47px;
 }
 .btn {
-    padding: 11px 27px;
+    padding: 10px 27px;
     border: 2px solid #E06733;
     border-radius: 10px;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     cursor: pointer;
+}
+.adout__container{
+    display: flex;
+    justify-content: space-between;
+    padding: 93px 0 94px 0;
+    align-items: center;
+}
+.about__content {
+    max-width: 618px;
+    padding-left: 12px;
+}
+.about__title {
+    font-family: 'Inika';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    color: #499A18;
+    padding: 10px 0 40px 0;
+    max-width: 463px;
+}
+.about__text {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #636060;
+}
+.about__image {
+    margin-right: -14px;
 }
