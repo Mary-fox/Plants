@@ -92,7 +92,7 @@ body {
     font-weight: 700;
     color: #E06733 !important;
 }
-.welcome, .service {
+.welcome, .service, .contacts {
     background: #EDF2EC;
 }
 .welcome__container {
@@ -129,6 +129,7 @@ body {
     font-size: 16px;
     line-height: 20px;
     cursor: pointer;
+    background: #EDF2EC;
 }
 .about__container{
     display: flex;
@@ -215,7 +216,7 @@ body {
     padding-bottom: 36px;
 }
 .prices__block {
-    padding: 38px 0 115px;
+    padding: 38px 0 128px;
     display: flex;
     justify-content: space-between;
 }
@@ -282,4 +283,79 @@ body {
     position: absolute;
     top: 222px;
     left: 294px;
+}
+.contacts__content {
+    display: flex;
+    padding-top: 53px;
+}
+.contacts__image {
+    padding-right: 113px;
+}
+.contacts__title {  
+    font-family: 'Inika';
+    font-size: 40px;
+    line-height: 52px;
+    color: #499A18;
+    padding: 10px 68px 0 0;
+}
+.contacts__list {
+    position: relative;
+    padding-top: 96px;
+}
+.contacts__item {
+    background: #D6E7D2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px;
+    padding: 5px 390px 5px 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: #717171;
+    cursor: pointer;
+}
+.contacts__item::after {
+    content: url(../assets/icons/accordion_btn.svg);
+    position: absolute;
+    right: 33px;
+}
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0 38px 0;
+    font-size: 20px;
+    line-height: 45px;
+    color: #000000;
+}
+.footer__text {
+    margin-left: 18px;
+}
+.footer__year{
+    display: flex;
+    gap: 20px;
+}
+.footer__icons {
+    display: flex;
+    gap: 20px;
+    padding-top: 7px;
+}
+.footer__icon {
+   list-style-type: none;
+}
+/* hover,active... */
+.btn:hover {
+    background: #E06733;
+    border: 1px solid #E06733;
+    outline: 1px solid #E06733;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+.contacts__item:hover {
+    background: #C1E698;
+    border: 0.5px solid #D6E7D2;
+    outline: 0.5px solid #D6E7D2;
+    border-radius: 0px;
+}
+.nav__item a:hover, .nav__item a:active{
+    color: #E06733;
+    
 }
