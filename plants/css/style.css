@@ -341,6 +341,9 @@ body {
 .footer__icon {
    list-style-type: none;
 }
+.footer a {
+    color: #000000;
+}
 /* hover,active... */
 .btn:hover {
     background: #E06733;
