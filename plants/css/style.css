@@ -357,5 +357,7 @@ body {
 }
 .nav__item a:hover, .nav__item a:active{
     color: #E06733;
-    
+}
+.price__item:hover {
+    background: #D6E7D2;
 }
