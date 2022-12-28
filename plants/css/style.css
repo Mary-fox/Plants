@@ -98,7 +98,7 @@ body {
 .welcome__container {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0 51px 0;
+    padding: 48px 0 51px 0;
 }
 .welcome__title {
     font-family: 'Inter';
@@ -249,7 +249,7 @@ body {
     padding: 19px 123px 16px 36px;
 }
 .price__item::after {
-    content: url(../assets/icons/accordion_btn.svg);
+    content: url(../assets/icons/ptices_btn.svg);
     position: absolute;
     right: 41px;
 }
@@ -290,6 +290,9 @@ body {
 }
 .contacts__image {
     padding-right: 113px;
+}
+.contacts__image img {
+    height: 100%;
 }
 .contacts__title {  
     font-family: 'Inika';
@@ -344,6 +347,9 @@ body {
 .footer a {
     color: #000000;
 }
+.footer__image {
+    transition: 0.5s;
+}
 /* hover,active... */
 .btn:hover {
     background: #E06733;
@@ -364,3 +370,6 @@ body {
 .price__item:hover {
     background: #D6E7D2;
 }
+.footer__image:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+   }
