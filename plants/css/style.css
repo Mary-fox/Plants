@@ -51,7 +51,7 @@ a {
 
 html,
 body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     scroll-behavior: smooth;
 }
 
@@ -61,8 +61,9 @@ body {
 }
 
 .wrapper {
-    max-width: 1222px;
+    max-width: 1440px;
     margin: 0 auto;
+    padding: 0 109px;
 }
 .header {
     background: #EDF2EC;
@@ -71,7 +72,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 51px 0 62px 0;
+    padding: 51px 109px 62px 109px;
 }
 .nav {
     padding-top: 6px;
@@ -94,6 +95,19 @@ body {
 .active {
     font-weight: 700;
     color: #E06733 !important;
+}
+@media (max-width: 900px) {
+    .wrapper {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+    .header .wrapper {
+        padding: 43px 50px 35px 50px;
+    }
+    .nav__list {
+        gap: 46px;
+    }
 }
 .welcome, .service, .contacts {
     background: #EDF2EC;
@@ -123,6 +137,38 @@ body {
     line-height: 35px;
     color: #636060;
     padding-bottom: 47px;
+}
+@media (max-width: 900px) {
+    .welcome__container {
+        flex-direction: row-reverse;
+        padding-bottom: 69px;
+    }
+    .welcome__title {
+        font-size: 35px;
+        padding-bottom: 30px;
+        margin: 0;
+    }
+    .welcome__image img {
+        display: none;
+    }
+    .welcome__image {
+        background-image: url(../assets/image/leafs-tablet.png);
+        width: 280px;
+        height: 254px;
+        position: relative;
+        bottom: 4px;
+        right: 7px;
+    }
+    .welcome__content{
+        max-width: 346px;
+        padding-top: 5px;
+    }
+    .welcome__text {
+        font-size: 16px;
+        line-height: 25px;
+        padding-bottom: 35px;
+        padding-left: 7px;
+    }
 }
 .btn {
     padding: 10px 26px;
@@ -159,6 +205,31 @@ body {
     line-height: 30px;
     color: #636060;
 }
+@media (max-width: 900px) {
+    .about__container {
+        flex-direction: column;
+        padding-top: 40px;
+    }
+    .about__content {
+        max-width: 668px;
+    }
+    .about__title{
+        max-width: 423px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 0 51px 0;
+        font-size: 35px;
+        line-height: 46px;
+    }
+    .about__image img {
+        max-width: 250px;
+        max-height: 258px;
+    }
+    .about__text {
+        padding-bottom: 68px;
+    }
+   
+}
 .service__title {
     font-family: 'Inika';
     font-weight: 400;
@@ -190,7 +261,7 @@ body {
 }
 .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:repeat(auto-fit, minmax(330px, 1fr)); 
     width: 100%;
     row-gap: 55px;
     column-gap: 116px;
@@ -200,6 +271,7 @@ body {
     border: 1px solid #E3E1D5;
     border-radius: 0px 0px 20px 20px;
     text-align: center;
+    max-width: 330px;
 }
 .card__image img{
     vertical-align: top;
@@ -221,6 +293,35 @@ body {
     line-height: 20px;
     color: #717171;
     padding-bottom: 35px;
+}
+@media (max-width: 900px) {
+    .service__content {
+        flex-direction: column;
+        padding: 60px 0 40px 0;
+    }
+    .service__title {
+        font-size: 35px;
+        line-height: 46px;
+    }
+    .service__btns {
+        padding: 42px 0 0 0;
+    }
+    .cards {
+        grid-template-columns:repeat(auto-fit, minmax(281px, 1fr)); 
+        row-gap: 38px;
+        column-gap: 106px;
+        padding-bottom: 70px;
+    }
+    .card__image img {
+        width: 280px;
+        height: 350px;
+    }
+    .card__title {
+        padding: 10px 0 10px 0;
+    }
+    .card__text {
+        padding: 0 39px 18px 39px;
+    }
 }
 .prices__block {
     padding: 39px 0 129px;
@@ -286,11 +387,22 @@ body {
     border: 1px solid #E06733;
     border-radius: 5px;
 }
-.info__img {   
-    position: absolute;
-    top: 222px;
-    left: 294px;
+.info__img img {   
+    height: 175px;
 }
+@media (max-width: 980px) {
+    .info__text {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+}
+/* @media (max-width: 930px) {
+    .info__img {
+        top: 280px;
+        left: 179px;
+    }
+} */
 .contacts__content {
     display: flex;
     padding-top: 50px;
@@ -326,6 +438,15 @@ body {
     content: url(../assets/icons/accordion_btn.svg);
     position: absolute;
     right: 33px;
+}
+@media (max-width: 1300px) {
+    .contacts__title{
+        position: absolute;
+    }
+    .contacts__content{
+        flex-direction: column-reverse;
+        padding: 50px 109px 0 109px;
+    }
 }
 .footer__content {
     display: flex;
@@ -381,3 +502,7 @@ body {
 .footer__image:hover {
     transform: scale(1.2); /* Увеличиваем масштаб */
    }
+
+@media (max-width: 900px) {
+
+}
