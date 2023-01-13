@@ -172,7 +172,8 @@ body {
 }
 .btn {
     padding: 10px 26px;
-    border: 2px solid #E06733;
+    border: 1px solid #E06733;
+    outline: 1px solid #E06733;
     border-radius: 10px;
     font-weight: 400;
     font-size: 16px;
@@ -324,7 +325,7 @@ body {
     }
 }
 .prices__block {
-    padding: 39px 0 129px;
+    padding: 39px 0 114px;
     display: flex;
     justify-content: space-between;
 }
@@ -366,7 +367,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     max-width: 452px;
-    gap: 38px;
+    gap: 40px;
     position: relative;
 }
 .info__text {
@@ -387,15 +388,31 @@ body {
     border: 1px solid #E06733;
     border-radius: 5px;
 }
-.info__img img {   
+.info__img {   
     height: 175px;
 }
 @media (max-width: 980px) {
+    .price__title {
+        font-size: 35px;
+        line-height: 42px;
+        padding-left: 16px;
+    }
+    .price__list {
+        padding: 29px 38px 33px 45px;
+    }
     .info__text {
         font-size: 25px;
         line-height: 35px;
+        padding-top: 102px;
     }
-
+    .info {
+        gap: 28px;
+    }
+    .info__img {    
+        position: relative;
+        top: 5px;
+        left: 2px;
+    }
 }
 /* @media (max-width: 930px) {
     .info__img {
@@ -439,13 +456,30 @@ body {
     position: absolute;
     right: 33px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
+    .prices__block {
+        padding: 39px 0 95px;
+    }
     .contacts__title{
         position: absolute;
+        left: 238px;
+        top: 29px
     }
     .contacts__content{
         flex-direction: column-reverse;
         padding: 50px 109px 0 109px;
+        position: relative;
+    }
+    .contacts__list {
+        padding: 140px 0 246px 0;
+    }
+    .contacts__item::after {
+        right: 36px;
+    }
+    .contacts__image img {
+        height: 248px;
+        position: relative;
+        left: 135px;
     }
 }
 .footer__content {
@@ -476,6 +510,34 @@ body {
 }
 .footer__image {
     transition: 0.3;
+}
+@media (max-width: 900px) {
+    .footer__content {
+        flex-direction: column;
+        align-items: center;
+        padding:33px 0 33px 0;
+        gap: 20px;
+        line-height: 24px;
+    }
+    .footer__text{
+        margin-left: 0;
+        position: relative;
+        bottom: 3px;
+    }
+    .footer__icons {
+        padding-top: 0;
+    }
+    .footer__year {
+        gap: 23px;
+    }
+    /* .footer__eta {
+        position: relative;
+        right: 5px;
+    }
+    .footer__year p {
+        position: relative;
+        right: 5px;
+    } */
 }
 /* hover,active... */
 .btn:hover {
