@@ -304,8 +304,8 @@ body {
 }
 .btn {
     padding: 10px 26px;
-    border: 1px solid #E06733;
-    outline: 1px solid #E06733;
+    border: 2px solid #E06733;
+    /* outline: 1px solid #E06733; */
     border-radius: 10px;
     font-weight: 400;
     font-size: 16px;
@@ -408,7 +408,7 @@ body {
     line-height: 26px;
     color: #E06733;
     margin-right: 33px;
-    border: 1px solid #E06733;
+    border: 2px solid #E06733;
     border-radius: 5px;
 }
 .service__btn:nth-child(2) {
@@ -524,6 +524,11 @@ body {
         padding: 0 35px 18px 35px;
     }
 }
+@media (max-width: 360px) {
+    .card__content {
+        left: 0;
+    }
+}
 .prices__block {
     padding: 39px 0 114px;
     display: flex;
@@ -585,7 +590,7 @@ body {
     font-size: 20px;
     line-height: 26px;
     color: #E06733;
-    border: 1px solid #E06733;
+    border: 2px solid #E06733;
     border-radius: 5px;
 }
 .info__img {   
@@ -762,6 +767,11 @@ body {
         top: 7px;
     }
 }
+@media (max-width: 379px) {
+    .contacts__item {
+        padding: 6px 235px 5px 17px;
+    }
+}
 .footer__content {
     display: flex;
     justify-content: space-between;
@@ -825,8 +835,8 @@ body {
 /* hover,active... */
 .btn:hover {
     background: #E06733;
-    border: 1px solid #E06733;
-    outline: 1px solid #E06733;
+    border: 2px solid #E06733;
+    /* outline: 1px solid #E06733; */
     border-radius: 10px;
     color: #FFFFFF;
     transition: 0.3s;
