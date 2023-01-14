@@ -30,11 +30,11 @@ const links = Array.from(menu.children);
 
 // Для каждого элемента меню при клике вызываем ф-ию
 links.forEach((link) => {
-  link.addEventListener("click", closeOnClick);
+  link.addEventListener("click", closeRemove);
 });
 
 // Закрытие попапа при клике на меню
-function closeOnClick() {
+function closeRemove() {
   popup.classList.remove("open");
   hamb.classList.remove("active");
   body.classList.remove("noscroll");
@@ -42,5 +42,5 @@ function closeOnClick() {
 }
 //при клике на затемненную область
 blackLayer.addEventListener('click', () => {
-   closeOnClick();
+  closeRemove();
 })

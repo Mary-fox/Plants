@@ -219,7 +219,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,.4);
+        background: rgba(0,0,0,.2);
         transition: 1s;
     }
 }
@@ -843,8 +843,8 @@ body {
 }
 .contacts__item:hover {
     background: #C1E698;
-    border: 0.5px solid #D6E7D2;
-    outline: 0.5px solid #D6E7D2;
+    /* border: 0.5px solid #D6E7D2;
+    outline: 0.5px solid #D6E7D2; */
     border-radius: 0px;
 
 }
