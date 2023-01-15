@@ -124,10 +124,24 @@ body {
         padding: 0 25px;
     }
     .header .wrapper {
-        padding: 23px 25px 30px 23px;
+        padding: 25px 25px 28px 23px;
+        justify-content: left;
+        flex-wrap: wrap;
     }
     .nav {
         padding-top: 0;
+    }
+    .nav__list {
+        gap: 9px;
+    }
+    .nav__item a {
+        font-size: 10px;
+    }
+}
+@media (max-width: 380px) {
+    .header .wrapper {
+        justify-content: space-between;
+        flex-wrap: nowrap;
     }
     .nav__list {
         display: none;
@@ -502,7 +516,7 @@ body {
         font-size: 15px;
         line-height: 20px;
         margin-right: 8px;
-        margin-bottom: 9px;
+        margin-bottom: 7px;
     }
     .service__btn:nth-child(2) {
         padding: 6px 39px;
