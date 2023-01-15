@@ -1,46 +1,42 @@
-const hamb = document.querySelector("#hamb");
-const popup = document.querySelector("#popup");
 const body = document.body;
 const blackLayer = document.querySelector('.black-layer')
+const hamb = document.querySelector("#hamb");
+const popup = document.querySelector("#popup");
 
-// Клонируем меню, чтобы задать свои стили для мобильной версии
+// Дубликат nav, для создания новых стилей
 const menu = document.querySelector(".nav__list").cloneNode(1);
 
-// При клике на иконку hamb вызываем ф-ию hambHandler
 hamb.addEventListener("click", hambHandler);
 
-// Выполняем действия при клике ..
 function hambHandler(e) {
   e.preventDefault();
-  // Переключаем стили элементов при клике
   popup.classList.toggle("open");
   hamb.classList.toggle("active");
   body.classList.toggle("noscroll");
   blackLayer.classList.toggle('black-layer_active');
-  renderPopup();
+  renderBurger();
 }
 
-// Здесь мы рендерим элементы в наш попап
-function renderPopup() {
+//Рендер элементов
+function renderBurger() {
   popup.appendChild(menu);
 }
 
-// Код для закрытия меню при нажатии на ссылку
-const links = Array.from(menu.children);
-
-// Для каждого элемента меню при клике вызываем ф-ию
-links.forEach((link) => {
-  link.addEventListener("click", closeRemove);
-});
-
-// Закрытие попапа при клике на меню
 function closeRemove() {
   popup.classList.remove("open");
   hamb.classList.remove("active");
   body.classList.remove("noscroll");
   blackLayer.classList.remove('black-layer_active');
 }
-//при клике на затемненную область
+//Закрытие при клике на затемненную область
 blackLayer.addEventListener('click', () => {
   closeRemove();
 })
+//Закрытие при клике на меню
+menu.addEventListener('click', () => {
+  closeRemove();
+})
+
+
+
+
