@@ -421,7 +421,7 @@ body {
     font-size: 20px;
     line-height: 26px;
     color: #E06733;
-    margin-right: 33px;
+    margin-right: 31px;
     border: 2px solid #E06733;
     border-radius: 5px;
 }
@@ -473,7 +473,7 @@ body {
 }
 @media (max-width: 1000px) {
     .service__content {
-        padding: 60px 0 40px 0;
+        padding: 59px 0 40px 0;
     }
     .service__title {
         font-size: 35px;
@@ -481,6 +481,9 @@ body {
     }
     .service__btns {
         padding: 42px 0 0 0;
+    }
+    .service__btn {
+        margin-right: 31px;
     }
     .cards {
         grid-template-columns:repeat(auto-fit, minmax(281px, 1fr)); 
@@ -490,7 +493,7 @@ body {
     }
     .card__image img {
         width: 280px;
-        height: 350px;
+        height: 349px;
     }
     .card__title {
         padding: 10px 0 10px 0;
@@ -499,7 +502,7 @@ body {
         padding: 0 38px 18px 39px;
     }
     .card__content {
-        max-width: 280px;
+        max-width: 281px;
     }
 }
 @media (max-width: 767px) {
@@ -526,7 +529,7 @@ body {
     }
     .cards {
         text-align: center;
-        row-gap: 34px;
+        row-gap: 36px;
         padding-bottom: 27px;
     }
     .card__content {
@@ -544,7 +547,7 @@ body {
     }
 }
 .prices__block {
-    padding: 39px 0 114px;
+    padding: 39px 0 109px;
     display: flex;
     justify-content: space-between;
 }
@@ -720,7 +723,7 @@ body {
 }
 @media (max-width: 1350px) {
     .prices__block {
-        padding: 39px 0 95px;
+        padding: 39px 0 92px;
  
     }
     .contacts__title{
@@ -765,7 +768,7 @@ body {
         padding: 6px 275px 5px 17px;
     }
     .prices__block {
-        padding: 26px 0 40px;
+        padding: 23px 0 40px;
         justify-content: center;
         flex-wrap: wrap;
     }
@@ -774,7 +777,7 @@ body {
         left: 96px;
     }
     .contacts__list {
-        padding: 108px 0 130px 0;
+        padding: 107px 0 128px 0;
     }
     .contacts__item::after {
         right: 20px;
