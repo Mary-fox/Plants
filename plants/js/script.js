@@ -38,5 +38,18 @@ menu.addEventListener('click', () => {
 })
 
 
-
-
+//аккордеон 
+  const prices = document.querySelectorAll('.price__item');
+  prices.forEach((price) => {
+    price.addEventListener('click', () => {
+      if(price.classList.contains('active')) {
+        price.classList.remove('active');
+      } else {
+        const pricesActive = document.querySelectorAll('.price__item.active');
+        pricesActive.forEach((priceActive) => {
+        priceActive.classList.remove('active');
+        });
+        price.classList.add('active');
+      }
+    });
+  });
