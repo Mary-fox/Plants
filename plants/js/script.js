@@ -53,3 +53,86 @@ menu.addEventListener('click', () => {
       }
     });
   });
+
+  //селект
+
+  const item = document.querySelector(".contacts__list");
+  const itemName = document.querySelector(".contacts__item");
+  const box = document.querySelector(".contacts__box");
+  const town = document.querySelectorAll(".contacts__town");
+  const cityValue = document.querySelector(".town__name-value");
+  const phoneValue = document.querySelector(".town__phone-value");
+  const adressValue = document.querySelector(".town__adress-value");
+  const callNumber = document.querySelector(".town__number")
+  const cardTown = document.querySelector(".town__wrapper")
+  const valueCard = document.querySelector("label").innerHTML;
+  const bode = document.querySelector(".contacts")
+
+  item.addEventListener('click', () => {
+    item.classList.toggle("pick");
+    box.classList.toggle("active");
+    itemName.classList.toggle("pick");
+   
+   
+    body.addEventListener("click", close);
+        function close(e) {
+              let selectedItem = e.target.closest(".contacts__item");
+              if (selectedItem === null)
+               {      
+                box.classList.toggle('active');
+                item.classList.toggle("pick");
+                itemName.classList.toggle("pick");
+                body.removeEventListener("click", close);
+
+              }
+            }
+          }    
+    );
+    town.forEach((e) => {
+      e.addEventListener("click", () => {
+        console.log("bla2")
+        itemName.innerHTML = e.querySelector("label").innerHTML;
+        itemName.classList.toggle('pick');
+        item.classList.toggle("pick");
+        box.classList.remove('active');
+        showCard(e);
+
+        //при выборе города закрываем список и выводис список в title
+      });
+    })
+
+    function showCard(e) {
+      cardTown.style.display = "block";
+    
+      itemName.classList.add('pick');
+        if ( e.querySelector("label").innerHTML === "Canandaigua, NY") {
+            cityValue.textContent = "Canandaigua, NY";
+            phoneValue.textContent = "+1	585	393 0001";
+            adressValue.textContent = "151 Charlotte Street";
+            callNumber.setAttribute('href', "tel:+15853930001");
+            console.log(callNumber)
+        } else if (e.querySelector("label").innerHTML === "New York City"){
+            cityValue.textContent = "New York City";
+            phoneValue.textContent = "+1	212	456 0002";
+            adressValue.textContent = "9 East 91st Street";
+            callNumber.setAttribute('href', "tel:+12124560002");
+            console.log(callNumber)
+        } else if (e.querySelector("label").innerHTML === "Yonkers, NY") {
+            cityValue.textContent = "Yonkers, NY";
+            phoneValue.textContent = "+1	914	678 0003";
+            adressValue.textContent = "511 Warburton Ave";
+            callNumber.setAttribute('href', "tel:+19146780003");
+            console.log(callNumber)
+        } else if (e.querySelector("label").innerHTML === "Sherrill, NY") {
+          cityValue.textContent = "Sherrill, NY";
+          phoneValue.textContent = "+1	315	908 0004";
+          adressValue.textContent = "14 WEST Noyes BLVD";
+          callNumber.setAttribute('href', "tel:+13159080004");
+          console.log(callNumber)
+        }
+    }
+    cardTown.style.display = "none";
+
+
+   
+
