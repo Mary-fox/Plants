@@ -70,7 +70,9 @@ menu.addEventListener('click', () => {
   const callNumber = document.querySelector(".town__number")
   const cardTown = document.querySelector(".town__wrapper")
   const valueCard = document.querySelector("label").innerHTML;
-  const bode = document.querySelector(".contacts")
+  const blockPrice = document.querySelector(".prices__block");
+  const womanImage = document.querySelector(".contacts__image");
+
 
   item.addEventListener('click', () => {
     item.classList.toggle("pick");
@@ -106,8 +108,7 @@ menu.addEventListener('click', () => {
     })
 
     function showCard(e) {
-      cardTown.style.display = "block";
-    
+      cardTown.classList.add("open");
       itemName.classList.add('pick');
         if ( e.querySelector("label").innerHTML === "Canandaigua, NY") {
             cityValue.textContent = "Canandaigua, NY";
@@ -134,6 +135,12 @@ menu.addEventListener('click', () => {
           callNumber.setAttribute('href', "tel:+13159080004");
           console.log(callNumber)
         }
+        blockPrice.addEventListener ("click", () => {
+          cardTown.classList.remove("open");
+        })
+        womanImage.addEventListener ("click", () => {
+          cardTown.classList.remove("open");
+        })
     }
 
 

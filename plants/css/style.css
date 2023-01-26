@@ -643,6 +643,7 @@ body {
     border: #FFFFFF;
     cursor: pointer;
     margin-bottom: 10px;
+    max-width: 89px;
 }
 .price__link {
     font-weight: 700;
@@ -856,6 +857,9 @@ body {
     border: 1px solid #000000;
     border-radius: 20px;
     display: none;
+}
+.town__wrapper.open {
+    display: block;
 }
 .town {
     padding: 17px 33px 32px 33px;
