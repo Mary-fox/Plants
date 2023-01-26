@@ -40,16 +40,20 @@ menu.addEventListener('click', () => {
 
 //аккордеон 
   const prices = document.querySelectorAll('.price__item');
+  const priceBox = document.querySelector('.price__list');
   prices.forEach((price) => {
     price.addEventListener('click', () => {
       if(price.classList.contains('active')) {
         price.classList.remove('active');
+        priceBox.classList.remove('open')
       } else {
         const pricesActive = document.querySelectorAll('.price__item.active');
         pricesActive.forEach((priceActive) => {
         priceActive.classList.remove('active');
+        priceBox.classList.remove('open')
         });
         price.classList.add('active');
+        priceBox.classList.add('open');
       }
     });
   });
@@ -131,7 +135,7 @@ menu.addEventListener('click', () => {
           console.log(callNumber)
         }
     }
-    cardTown.style.display = "none";
+
 
 
    
