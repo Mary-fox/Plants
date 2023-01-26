@@ -462,6 +462,12 @@ body {
     color: #717171;
     padding-bottom: 35px;
 }
+.card.blur {
+    filter: blur(3px);
+}
+.card.noblur {
+    filter: blur(0px);
+}
 @media (max-width: 1260px) {
     .service__content {
         flex-direction: column;
@@ -829,6 +835,7 @@ body {
     width: 100%;
     display: block; 
     margin-bottom: 7px;
+    cursor: pointer;
 }
 .contacts__box.active {
     width: 450px;
@@ -1072,20 +1079,26 @@ body {
     
 }
 /* hover,active... */
-.btn:hover {
+/* .btn:hover {
     background: #E06733;
     border: 2px solid #E06733;
     /* outline: 1px solid #E06733; */
-    border-radius: 10px;
+    /* border-radius: 10px;
     color: #FFFFFF;
-    transition: 0.3s;
-}
+    transition: 0.3s; }*/
 .contacts__item:hover {
     background: #C1E698;
     /* border: 0.5px solid #D6E7D2;
     outline: 0.5px solid #D6E7D2; */
     border-radius: 0px;
 
+}
+.service__btn.active {
+    background: #E06733;
+    border: 2px solid #E06733;
+    border-radius: 10px;
+    color: #FFFFFF;
+    transition: 0.3s;
 }
 .nav__item a:hover, .nav__item a:active{
     color: #E06733;
