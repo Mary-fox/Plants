@@ -143,7 +143,56 @@ menu.addEventListener('click', () => {
         })
     }
 
+    ////blur
+
+    const buttons = document.querySelector(".service__btns");
+    const btns = document.querySelectorAll (".service__btn")
+    const cardAll = document.querySelectorAll(".card");
+    const lawnCard = Array.from(document.querySelectorAll(".card__lawn"));
+    const gardenCard =  Array.from(document.querySelectorAll(".card__garden"));
+    const plantingCard =  Array.from(document.querySelectorAll(".card__planting"));
+    let click = 0;
+
+    function blurActive() {
+      cardAll.forEach((card) => card.classList.add("blur")); //блюр на все, при клике
+    }
+    function blurRemove() {
+      if (click === 0) {
+        cardAll.forEach((card) => card.classList.remove("blur"))
+      }
+    }
+       
+    btns.forEach((btn) => { btn.addEventListener("click", () => {
+      if(btn.classList.contains("active")) {
+        btn.classList.remove("active");
+        click--
+      } else {
+      if (click < 2) {
+        btn.classList.add("active");
+        click++
+      } else if (click >= 2){
+        return false
+      }
+      } 
+      if (btn.classList.contains("service__gardens")) {
+        gardenCard.forEach((card) => card.classList.toggle("noblur"));
+      } 
+      if (btn.classList.contains("service__lawn")) {
+        lawnCard.forEach((card) => card.classList.toggle("noblur"));
+      }
+      if (btn.classList.contains("service__planting")) {
+        plantingCard.forEach((card) => card.classList.toggle("noblur"));
+        }
+        })
+      })
 
 
+  
+
+      buttons.addEventListener("click", blurActive);
+      buttons.addEventListener("click", blurRemove);
    
+ 
+
+
 
