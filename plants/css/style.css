@@ -397,7 +397,6 @@ body {
         padding-bottom: 0;
     }
 }
-
 .service__title {
     font-family: 'Inika';
     font-weight: 400;
@@ -463,10 +462,12 @@ body {
     padding-bottom: 35px;
 }
 .card.blur {
-    filter: blur(3px);
+    filter: blur(4px);
+    transition: 0.5s;
 }
 .card.noblur {
     filter: blur(0px);
+    transition: 0.5s;
 }
 @media (max-width: 1260px) {
     .service__content {
@@ -594,7 +595,6 @@ body {
 }
 .price__item.active::after {
     content: url(../assets/icons/accordion_btn-active.svg);
-
 }
 .price__content {
     max-width: 250px;
@@ -815,7 +815,6 @@ body {
 .contacts__item.pick::after {
     content: url(../assets/icons/accordion_btn-active.svg);
 }
-
 .contacts__town input{
     display: none;
 }
@@ -1079,19 +1078,19 @@ body {
     
 }
 /* hover,active... */
-/* .btn:hover {
+.button:hover {
     background: #E06733;
     border: 2px solid #E06733;
     /* outline: 1px solid #E06733; */
-    /* border-radius: 10px;
+     /* border-radius: 10px; */
     color: #FFFFFF;
-    transition: 0.3s; }*/
+    transition: 0.3s;
+ }
 .contacts__item:hover {
     background: #C1E698;
     /* border: 0.5px solid #D6E7D2;
     outline: 0.5px solid #D6E7D2; */
     border-radius: 0px;
-
 }
 .service__btn.active {
     background: #E06733;

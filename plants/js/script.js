@@ -165,11 +165,10 @@ menu.addEventListener('click', () => {
     btns.forEach((btn) => { btn.addEventListener("click", () => {
       if(btn.classList.contains("active")) {
         btn.classList.remove("active");
-        click--
-      } else {
-      if (click < 2) {
+        click = click -1;
+      } else { if (click < 2) {
         btn.classList.add("active");
-        click++
+        click = click + 1;
       } else if (click >= 2){
         return false
       }
