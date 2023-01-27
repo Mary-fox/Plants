@@ -463,10 +463,11 @@ body {
 }
 .card.blur {
     filter: blur(4px);
-    transition: 0.5s;
 }
 .card.noblur {
     filter: blur(0px);
+}
+.card {
     transition: 0.5s;
 }
 @media (max-width: 1260px) {
