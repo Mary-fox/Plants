@@ -72,6 +72,7 @@ menu.addEventListener('click', () => {
   const valueCard = document.querySelector("label").innerHTML;
   const blockPrice = document.querySelector(".prices__block");
   const womanImage = document.querySelector(".contacts__image");
+  const townItem = document.querySelectorAll(".contacts__town");
 
 
   item.addEventListener('click', () => {
@@ -92,56 +93,63 @@ menu.addEventListener('click', () => {
 
               }
             }
-          }    
-    );
-    town.forEach((e) => {
-      e.addEventListener("click", () => {
-        console.log("bla2")
-        itemName.innerHTML = e.querySelector("label").innerHTML;
-        itemName.classList.toggle('pick');
-        item.classList.toggle("pick");
-        box.classList.remove('active');
-        showCard(e);
-
-        //при выборе города закрываем список и выводис список в title
-      });
-    })
-
-    function showCard(e) {
-      cardTown.classList.add("open");
-      itemName.classList.add('pick');
-        if ( e.querySelector("label").innerHTML === "Canandaigua, NY") {
-            cityValue.textContent = "Canandaigua, NY";
-            phoneValue.textContent = "+1	585	393 0001";
-            adressValue.textContent = "151 Charlotte Street";
-            callNumber.setAttribute('href', "tel:+15853930001");
-            console.log(callNumber)
-        } else if (e.querySelector("label").innerHTML === "New York City"){
-            cityValue.textContent = "New York City";
-            phoneValue.textContent = "+1	212	456 0002";
-            adressValue.textContent = "9 East 91st Street";
-            callNumber.setAttribute('href', "tel:+12124560002");
-            console.log(callNumber)
-        } else if (e.querySelector("label").innerHTML === "Yonkers, NY") {
-            cityValue.textContent = "Yonkers, NY";
-            phoneValue.textContent = "+1	914	678 0003";
-            adressValue.textContent = "511 Warburton Ave";
-            callNumber.setAttribute('href', "tel:+19146780003");
-            console.log(callNumber)
-        } else if (e.querySelector("label").innerHTML === "Sherrill, NY") {
-          cityValue.textContent = "Sherrill, NY";
-          phoneValue.textContent = "+1	315	908 0004";
-          adressValue.textContent = "14 WEST Noyes BLVD";
-          callNumber.setAttribute('href', "tel:+13159080004");
-          console.log(callNumber)
-        }
-        blockPrice.addEventListener ("click", () => {
-          cardTown.classList.remove("open");
-        })
-        womanImage.addEventListener ("click", () => {
-          cardTown.classList.remove("open");
-        })
+          });
+  town.forEach((e) => {
+    e.addEventListener("click", () => {
+    itemName.innerHTML = e.querySelector("label").innerHTML;
+    itemName.classList.toggle('pick');
+    item.classList.toggle("pick");
+    box.classList.remove('active');
+    showCard(e);
+    //при выборе города закрываем список и выводис список в title
+    });
+  })
+  function showCard(e) {
+    cardTown.classList.add("open");
+    itemName.classList.add('pick');
+    if ( e.querySelector("label").innerHTML === "Canandaigua, NY") {
+      cityValue.textContent = "Canandaigua, NY";
+      phoneValue.textContent = "+1	585	393 0001";
+      adressValue.textContent = "151 Charlotte Street";
+      callNumber.setAttribute('href', "tel:+15853930001");
+      console.log(callNumber)
+    } else if (e.querySelector("label").innerHTML === "New York City"){
+      cityValue.textContent = "New York City";
+      phoneValue.textContent = "+1	212	456 0002";
+      adressValue.textContent = "9 East 91st Street";
+      callNumber.setAttribute('href', "tel:+12124560002");
+      console.log(callNumber)
+    } else if (e.querySelector("label").innerHTML === "Yonkers, NY") {
+      cityValue.textContent = "Yonkers, NY";
+      phoneValue.textContent = "+1	914	678 0003";
+      adressValue.textContent = "511 Warburton Ave";
+      callNumber.setAttribute('href', "tel:+19146780003");
+      console.log(callNumber)
+    } else if (e.querySelector("label").innerHTML === "Sherrill, NY") {
+      cityValue.textContent = "Sherrill, NY";
+      phoneValue.textContent = "+1	315	908 0004";
+      adressValue.textContent = "14 WEST Noyes BLVD";
+      callNumber.setAttribute('href', "tel:+13159080004");
+      console.log(callNumber)
     }
+  }
+  function deleteImage () {
+    if (cardTown.classList.contains("open")) {
+        womanImage.classList.add("none")
+    } else {womanImage.classList.remove("none")}
+  }
+  
+  townItem.forEach((item) => item.addEventListener("click", deleteImage)); //убираем картинку из секции при открытии карточки
+    
+  blockPrice.addEventListener ("click", () => {
+    cardTown.classList.remove("open");
+    womanImage.classList.remove("none")
+  })
+      
+  womanImage.addEventListener ("click", () => {
+      cardTown.classList.remove("open");
+      womanImage.classList.remove("none")
+  })
 
     ////blur
 

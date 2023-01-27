@@ -995,6 +995,10 @@ body {
         transition: 0.3s;
         z-index: 3;
     } 
+    .town__wrapper.open {
+        display: block;
+        margin-bottom: 28px;
+    }
     .town__name {
         margin-right: 22px;
     }
@@ -1011,6 +1015,12 @@ body {
     }
     .town {
         padding: 20px 36px 23px 36px;
+    }
+    /* .town__wrapper.open + .contacts__image {
+        display: none;
+    } */
+    .contacts__image.none {
+        display: none;
     }
 }
 @media (max-width: 379px) {
