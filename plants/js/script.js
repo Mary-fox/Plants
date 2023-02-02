@@ -140,11 +140,6 @@ menu.addEventListener('click', () => {
   }
   
   townItem.forEach((item) => item.addEventListener("click", deleteImage)); //убираем картинку из секции при открытии карточки
-    
-  blockPrice.addEventListener ("click", () => {
-    cardTown.classList.remove("open");
-    womanImage.classList.remove("none")
-  })
       
   womanImage.addEventListener ("click", () => {
       cardTown.classList.remove("open");
